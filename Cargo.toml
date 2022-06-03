@@ -1,17 +1,12 @@
 [package]
-authors = ["Martin Amps <https://twitter.com/martinamps>"]
-name = "starter-snake-rust"
+authors = ["Ian Pratt"]
+name = "ferrite"
 version = "1.0.0"
 edition = "2018"
 
-homepage = "https://play.battlesnake.com"
-repository = "https://github.com/BattlesnakeOfficial/starter-snake-rust/"
-
 readme = "README.md"
 keywords = ["battlesnake"]
-description = """
-A simple Battlesnake written in Rust
-"""
+description = """"""
 
 [dependencies]
 rocket = { version = "0.5.0-rc.1", features = ["json"] }
