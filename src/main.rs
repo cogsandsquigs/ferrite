@@ -2,7 +2,6 @@
 extern crate rocket;
 
 use log::info;
-use rocket::fairing::AdHoc;
 use rocket::http::Status;
 use rocket::serde::{json::Json, Deserialize};
 use serde::Serialize;
@@ -116,14 +115,8 @@ fn rocket() -> _ {
 
     info!("Starting Battlesnake Server...");
 
-    rocket::build()
-        .attach(AdHoc::on_response("Server ID Middleware", |_, res| {
-            Box::pin(async move {
-                res.set_raw_header("Server", "BattlesnakeOfficial/starter-snake-rust");
-            })
-        }))
-        .mount(
-            "/",
-            routes![handle_index, handle_start, handle_move, handle_end],
-        )
+    rocket::build().mount(
+        "/",
+        routes![handle_index, handle_start, handle_move, handle_end],
+    )
 }
