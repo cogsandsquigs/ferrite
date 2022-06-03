@@ -12,10 +12,10 @@ pub fn get_info() -> Value {
     // Personalize the look of your snake per https://docs.battlesnake.com/references/personalization
     return json!({
         "apiversion": "1",
-        "author": "",
-        "color": "#888888",
-        "head": "default",
-        "tail": "default",
+        "author": "cogsandsquigs",
+        "color": "#111827",
+        "head": "sharp",
+        "tail": "sand-worm",
     });
 }
 
