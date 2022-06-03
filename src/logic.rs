@@ -14,7 +14,7 @@ pub fn get_info() -> Value {
         "apiversion": "1",
         "author": "cogsandsquigs",
         "color": "#111827",
-        "head": "sand-wormsharp",
+        "head": "sand-worm",
         "tail": "sharp",
     });
 }
