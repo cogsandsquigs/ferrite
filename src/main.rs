@@ -9,6 +9,7 @@ use serde_json::{json, Value};
 use std::collections::HashMap;
 use std::env;
 
+mod engine;
 mod logic;
 
 // Request types derived from https://docs.battlesnake.com/references/api#object-definitions
@@ -101,7 +102,7 @@ fn rocket() -> _ {
     // environment variable. However, Rocket looks at the `ROCKET_PORT` environment variable.
     // If we find a value for `PORT`, we set `ROCKET_PORT` to that value.
     // if let Ok(port) = env::var("PORT") {
-    let port = "2738";
+    let port = "8081";
     env::set_var("ROCKET_PORT", &port);
     // }
 
